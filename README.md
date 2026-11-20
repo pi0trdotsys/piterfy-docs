@@ -9,7 +9,7 @@ oraz naprawę montowania dysku USB z biblioteką.
 
 ## Architektura
 
-![Architektura Piterfy](docs/architecture.svg)
+<img src="docs/architecture.svg" alt="Architektura Piterfy" width="100%">
 
 ### Usługi (kontenery)
 
@@ -26,7 +26,7 @@ oraz naprawę montowania dysku USB z biblioteką.
 
 ## Przepływ muzyki
 
-![Przepływ muzyki](docs/data-flow.svg)
+<img src="docs/data-flow.svg" alt="Przepływ muzyki" width="100%">
 
 1. `discover` i `dj` wyszukują utwory w Soulseek przez `slskd`.
 2. `slskd` zapisuje pobrania do katalogu `incoming/`.
@@ -55,7 +55,7 @@ W efekcie dysk nie był zamontowany, a trzy kontenery wymagające
 `/srv/media/USB/Muzyka` kończyły działanie z `Exited (127)` (błąd OCI runtime:
 brak ścieżki bind-mount).
 
-![Naprawa montowania dysku USB](docs/usb-mount-fix.svg)
+<img src="docs/usb-mount-fix.svg" alt="Naprawa montowania dysku USB" width="100%">
 
 **Naprawa doraźna:**
 
