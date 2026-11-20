@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 640" font-family="-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#8b949e"/>
+    </marker>
+    <marker id="arrow-green" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#3fb950"/>
+    </marker>
+    <marker id="arrow-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#f85149"/>
+    </marker>
+  </defs>
+
+  <rect width="960" height="640" fill="#0d1117"/>
+  <text x="480" y="32" fill="#e6edf3" font-size="22" font-weight="700" text-anchor="middle">Naprawa montowania dysku USB</text>
+
+  <!-- Start -->
+  <g>
+    <rect x="330" y="52" width="300" height="46" rx="10" fill="#161b22" stroke="#9198a1" stroke-width="1.5"/>
+    <text x="480" y="80" fill="#e6edf3" font-size="15" font-weight="600" text-anchor="middle">Start serwera</text>
+  </g>
+  <path d="M480 98 L480 118" stroke="#8b949e" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
+
+  <g>
+    <rect x="330" y="118" width="300" height="46" rx="10" fill="#161b22" stroke="#9198a1" stroke-width="1.5"/>
+    <text x="480" y="146" fill="#e6edf3" font-size="15" font-weight="600" text-anchor="middle">systemd montuje /srv/media/USB</text>
+  </g>
+  <path d="M480 164 L480 188" stroke="#8b949e" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
+
+  <!-- Decyzja -->
+  <path d="M480 188 L548 230 L480 272 L412 230 Z" fill="#161b22" stroke="#d29922" stroke-width="1.5"/>
+  <text x="480" y="236" fill="#e6edf3" font-size="13" font-weight="600" text-anchor="middle">wolumin NTFS</text>
+  <text x="480" y="252" fill="#e6edf3" font-size="13" font-weight="600" text-anchor="middle">„dirty”?</text>
+
+  <!-- Gałąź NIE (prawo) -->
+  <text x="560" y="222" fill="#3fb950" font-size="12" font-weight="700">NIE</text>
+  <path d="M548 230 L640 230" stroke="#3fb950" stroke-width="1.5" fill="none" marker-end="url(#arrow-green)"/>
+
+  <g>
+    <rect x="640" y="208" width="260" height="44" rx="10" fill="#161b22" stroke="#3fb950" stroke-width="1.5"/>
+    <text x="770" y="235" fill="#e6edf3" font-size="14" font-weight="600" text-anchor="middle">Zamontowano</text>
+  </g>
+  <path d="M770 252 L770 290" stroke="#3fb950" stroke-width="1.5" fill="none" marker-end="url(#arrow-green)"/>
+
+  <g>
+    <rect x="620" y="290" width="300" height="46" rx="10" fill="#161b22" stroke="#3fb950" stroke-width="1.5"/>
+    <text x="770" y="318" fill="#e6edf3" font-size="13" font-weight="600" text-anchor="middle">start-after-usb.sh startuje kontenery</text>
+  </g>
+  <path d="M770 336 L770 368" stroke="#3fb950" stroke-width="1.5" fill="none" marker-end="url(#arrow-green)"/>
+
+  <g>
+    <rect x="650" y="368" width="240" height="44" rx="10" fill="#12261a" stroke="#3fb950" stroke-width="2"/>
+    <text x="770" y="395" fill="#3fb950" font-size="15" font-weight="700" text-anchor="middle">✓ Piterfy działa</text>
+  </g>
+
+  <!-- Gałąź TAK (dół) -->
+  <text x="496" y="300" fill="#f85149" font-size="12" font-weight="700">TAK</text>
+  <path d="M480 272 L480 330" stroke="#f85149" stroke-width="1.5" fill="none" marker-end="url(#arrow-red)"/>
+
+  <g>
+    <rect x="300" y="330" width="360" height="46" rx="10" fill="#161b22" stroke="#f85149" stroke-width="1.5"/>
+    <text x="480" y="358" fill="#e6edf3" font-size="13" font-weight="600" text-anchor="middle">ntfs3 odmawia montowania (brak „force”)</text>
+  </g>
+  <path d="M480 376 L480 410" stroke="#f85149" stroke-width="1.5" fill="none" marker-end="url(#arrow-red)"/>
+
+  <g>
+    <rect x="360" y="410" width="240" height="44" rx="10" fill="#161b22" stroke="#f85149" stroke-width="1.5"/>
+    <text x="480" y="437" fill="#e6edf3" font-size="14" font-weight="600" text-anchor="middle">mount failed</text>
+  </g>
+  <path d="M480 454 L480 490" stroke="#f85149" stroke-width="1.5" fill="none" marker-end="url(#arrow-red)"/>
+
+  <g>
+    <rect x="310" y="490" width="340" height="46" rx="10" fill="#2a1314" stroke="#f85149" stroke-width="2"/>
+    <text x="480" y="518" fill="#f85149" font-size="14" font-weight="700" text-anchor="middle">✗ 3 kontenery Exited (127)</text>
+  </g>
+
+  <!-- Sekcja naprawy -->
+  <path d="M480 536 L480 556" stroke="#8b949e" stroke-width="1.5" fill="none" stroke-dasharray="4 3" marker-end="url(#arrow)"/>
+
+  <g>
+    <rect x="60" y="556" width="400" height="46" rx="10" fill="#161b22" stroke="#58a6ff" stroke-width="1.5"/>
+    <text x="260" y="584" fill="#e6edf3" font-size="13" font-weight="600" text-anchor="middle">Doraźnie: ntfsfix -d → mount → docker start</text>
+  </g>
+
+  <g>
+    <rect x="500" y="556" width="400" height="46" rx="10" fill="#161b22" stroke="#58a6ff" stroke-width="1.5"/>
+    <text x="700" y="584" fill="#e6edf3" font-size="13" font-weight="600" text-anchor="middle">Trwale: ntfs-3g (recover) w fstab</text>
+  </g>
+</svg>
